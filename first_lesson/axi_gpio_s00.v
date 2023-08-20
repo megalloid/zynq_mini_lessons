@@ -408,7 +408,7 @@
 	wire [3:0] zynq_gpio_output;
 	
 	assign zynq_gpio_output[3:0] = slv_reg0;
-	assign zynq_gpio_input[1:0] = slv_reg1;
+	assign slv_reg1 = zynq_gpio_input[1:0];
 	
 	user_gpio user_gpio_inst(
 	   .gpio_input(gpio_input),
